@@ -1,0 +1,298 @@
+
+.imgbg{
+    box-shadow: 1px 0px 20px 0px rgba(0, 0, 0, 0.3);
+  position:absolute;
+  top: -0.5%;
+ left: 15%;
+width: 70%;
+height: 700px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+}
+.error{
+  position: relative;
+  top: 150px;
+  left: 0%;
+  text-align: center;
+  font: 1em sans-serif;
+  color: #db0000;
+}
+
+   /* ///  DECORATION CSS ///  */
+   .cont_select_center {
+    position: absolute;
+    left: 26%;
+    top: 220px;
+    width: 15.5%;
+    
+  }
+  
+  .cont_select_center_3{
+    position: absolute;
+    left: 51%;
+    top: 220px;
+    width: 15.5%; 
+  }
+ /* ///  END DECORATION CSS  ///  */
+  .icon_select_mate {
+    position: absolute;
+    top: 20px;
+    
+    right: 2%;
+    font-size: 16px;
+    height: 22px;
+    transition: all 275ms;
+  }
+  .select_mate {
+    position: relative;
+
+    float: left;
+    width: 150%;
+    font-family:sans-serif;
+    color: #777;
+    font-weight: 300;
+    background-color: #fff;
+    box-shadow: 1px 0px 20px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    transition: all 375ms ease-in-out;
+    /* Oculto el elemento select */
+  }
+  .select_mate select {
+    position: absolute;
+    overflow: hidden;
+
+    height: 0px;
+    opacity: 0;
+  }
+  .cont_list_select_mate {
+    position: relative;
+    float: left;
+
+    width: 100%;
+  }
+  .cont_select_int {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    
+    z-index: 1;
+    overflow: hidden;
+    height: 0px;
+    width: 100%;
+    background-color: #fff;
+    padding: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    border-radius: 0px 0px 3px 3px;
+    box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.2);
+    transition: all 375ms ease-in-out;
+  }
+  .to-top{
+    z-index: 1;
+  }
+  .cont_select_int li {
+    position: relative;
+    float: left;
+    
+    width: 96%;
+    border-bottom: 1px solid #E0E0E0;
+    background-color: #F5F5F5;
+    list-style-type: none;
+    padding: 10px 2%;
+    margin: 0px;
+    transition: all 275ms ease-in-out;
+    display: block;
+    cursor: pointer;
+  }
+  .cont_select_int li:last-child {
+    border-radius: 3px;
+    border-bottom: 0px;
+  }
+  .cont_select_int li:hover {
+    background-color: #EEEEEE;
+  }
+  .cont_select_int .active {
+    background-color: #EEEEEE;
+  }/* etiqueta <p> con la opcion selecionada  */
+  .selecionado_opcion {
+    padding: 20px 2%;
+    width: 96%;
+    display: block;
+    margin: 0px;
+    cursor: pointer;
+  }
+.button{
+  position: absolute;
+  width: 48%;
+  height: 50px;
+  background-color: gray;
+  top: 330px;
+  left: 26%;
+  font-size: large;
+  border-style: solid;
+  border-color: #034F75;
+  background-color: #F0F2F5;
+  border-radius: 5px;
+ transition: 0.1s; 
+}
+.button:hover{
+  background-color: #034F75;
+  color: white;
+
+}
+
+.bloc{
+  position: absolute;
+  top:800px;
+  border:solid, black;
+  width:70%;
+  height: 100%;
+
+  left: 15%;
+}
+.card{
+  margin-bottom: 100px;
+}
+#card-header{
+  background-color: #034F75;
+
+}
+
+#cadre_color{
+border:#034F75 solid 5px ;
+border-radius: 12px;
+color: wheat;
+}
+.titre{
+  color: #034F75;
+}
+.nom_dv{
+  position: absolute;
+  top: 20px;
+  left: 100px;
+}
+
+.pdf{
+  position: relative;
+  left: 20px;
+  top: 0px;
+  width:50px ;
+
+
+}
+
+.btn{
+  position: absolute;
+ width: 100px;
+  top: 12px;
+  height: 40px;
+  left:85%;
+
+ 
+}
+
+.telecharger{
+  position: absolute;
+  width: 50px;
+  top: 5px;
+  left: 25%;
+  z-index: 1;
+
+
+}
+::-webkit-scrollbar{
+width: 12px;
+}
+::-webkit-scrollbar-track{
+  background-color:white;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #034F75;
+  border-radius: 20px;
+}
+@media  screen and (max-width: 1280px) {
+  .imgbg{
+   left: 0%;
+   width: 100%;
+  }
+  .cont_select_center{
+    position: absolute;
+    top: 230px;
+    left:16% ;
+    width: 22%;
+  }
+
+  .cont_select_center_3{
+    position: absolute;
+    top: 230px;
+    width: 22%;
+    left:51% ;
+  }
+.button{
+  position: absolute;
+  top: 335px;
+  width: 68%;  
+  left: 16%;
+}
+
+.bloc{
+  position: absolute;
+width: 100%;
+ left: -00px;
+}
+.btn{
+  position: absolute;
+  left:80%;
+
+ }
+}
+@media  screen and (max-width: 700px) {
+  .imgbg{
+    height: 600px;
+}
+
+.error{
+  position: relative;
+  top: 100px;
+  left: -3%;
+
+}
+.cont_select_center{
+    position: absolute;
+    top: 140px;
+    left:16% ;
+    width: 45%;
+  }
+  
+  .cont_select_center_3{
+    position: absolute;
+    top: 220px;
+    width: 45%;
+    left:16% ;
+  }
+.button{
+  position: absolute;
+  top: 300px;
+  width: 68%;  
+  left: 16%;
+}
+.bloc{
+  position: absolute;
+  top: 700px;
+}
+.btn{
+  position: absolute;
+  left:79%;
+  top: 13px;
+  width: 70px;
+}
+.telecharger{
+  position: absolute;
+
+  left: 15%;
+
+
+
+}
+}

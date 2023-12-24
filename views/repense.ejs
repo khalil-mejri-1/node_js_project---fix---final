@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style_repense.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
+  <script src="js/script_button_1.js"></script>
+  <script src="js/script_repense.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> site a7med</title>
+    
+  </head>
+  <body >
+   
+
+  
+        <div >
+      <img class="imgbg"  src="images\img_home.png" alt="">
+        </div >
+       
+
+<div class="error" id="error"></div>
+
+
+<!--button 1  -->
+
+<form name="form">
+<div class="cont_select_center">
+
+  <!-- Custom select structure -->
+  <div id="condition">
+  <div class="select_mate" data-mate-select="active">
+    <select name="" onchange="" onclick="return false;" id="branche" >
+      <option value="0">Select Branche </option>
+      <option value="sc info">sc info</option>
+
+
+      
+
+
+    </select>
+    <p class="selecionado_opcion" onclick="open_select(this)"></p><span onclick="open_select(this)" class="icon_select_mate"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
+        <path d="M0-.75h24v24H0z" fill="none  " />
+      </svg></span>
+    <div class="cont_list_select_mate">
+      <ul class="cont_select_int"> </ul>
+    </div>
+  </div>
+  <!-- Custom select structure -->
+
+</div> <!-- End div center   -->
+
+
+</div>
+<!-- fin button 1  -->
+
+
+
+<!--button 3  -->
+<div id="condition">
+<div class="cont_select_center_3">
+
+  <!-- Custom select structure -->
+  <div class="select_mate" data-mate-select="active">
+    <select name="" onchange="" onclick="return false;" id="anner">
+      <option value="0">select Anner</option>
+      <option value="2023">2023</option>
+      <option value="2022">2022</option>
+      <option value="2021">2021</option>
+      <option value="2020">2020</option>
+      <option value="2019">2019</option>
+      <option value="2018">2018</option>
+      <option value="2017">2017</option>
+      <option value="2016">2016</option>
+      <option value="2015">2015</option>
+      <option value="2014">2014</option>
+      <option value="2013">2013</option>
+      
+
+    </select>
+    <p class="selecionado_opcion" onclick="open_select(this)"></p><span onclick="open_select(this)" class="icon_select_mate"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
+        <path d="M0-.75h24v24H0z" fill="none" />
+      </svg></span>
+    <div class="cont_list_select_mate">
+      <ul class="cont_select_int"> </ul>
+    </div>
+  </div>
+  <!-- Custom select structure -->
+
+</div> <!-- End div center   -->
+<!-- fin button 3  -->
+</div>
+
+
+</form>
+    <input class="button" type="submit" value="search" onclick="myFunction()">
+      
+    <div class="bloc">
+
+
+
+
+      
+<!--tout les dv 2023 branche lfsi   --> 
+                   <div class="card" id="cadre_color" >
+      
+                        <div class="card-header" id="card-header" >
+                              <DIV class="bloc_2010" id="lfsi_2023">   <h2> LFSI 2023  :</h3> </DIV>
+                        </div>
+      
+                               <ul class="list-group list-group-flush">
+     
+ 
+          <li class="list-group-item" name="algebre "><h4 class="titre"> DS / EXAMIN ALGEBRE :</h4> </li>
+          <% arr.forEach(item=>{ 
+            if(item.matiere==("algebre")&&(item.anner==2023)){%>
+      <form action="<%= item.link_telecharger %>">
+          <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+          <%} 
+        }) %>
+
+      </form>
+
+ 
+         <li class="list-group-item" ><h4 class="titre"> DS / EXAMIN   ANALYSE :</h4> </li>
+          <% arr.forEach(item=>{ 
+            if(item.matiere==("analyse")&&(item.anner==2023)){%>
+              <form action="<%= item.link_telecharger %>">
+                <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+                <%} 
+              }) %>
+      
+            </form>
+  
+ 
+
+            <li class="list-group-item"><h4 class="titre"> DS / EXAMIN ALGORITHME   :</h4> </li>
+            <% arr.forEach(item=>{ 
+              if(item.matiere==("algorithme")&&(item.anner==2023)){%>
+                <form action="<%= item.link_telecharger %>">
+                  <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+                  <%} 
+                }) %>
+        
+              </form>
+    
+
+
+              <li class="list-group-item"><h4 class="titre"> DS / EXAMIN ATELIER PROGRAMATION    :</h4> </li>
+              <% arr.forEach(item=>{ 
+            if(item.matiere==("atelier programmation")&&(item.anner==2023)){%>
+              <form action="<%= item.link_telecharger %>">
+                <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+                <%} 
+              }) %>
+      
+            </form>
+                
+
+
+
+            <li class="list-group-item"><h4 class="titre"> DS / EXAMIN SYSTEME LOGIQUE  :</h4> </li>
+            <% arr.forEach(item=>{ 
+              if(item.matiere==("systeme logique")&&(item.anner==2023)){%>
+                <form action="<%= item.link_telecharger %>">
+                  <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+                  <%} 
+                }) %>
+        
+              </form>
+
+
+              <li class="list-group-item"><h4 class="titre"> DS / EXAMIN SYSTEME D'EXPLOITATION  :</h4> </li>
+              <% arr.forEach(item=>{ 
+                if(item.matiere==(" systeme d'exploitation")&&(item.anner==2023)){%>
+                  <form action="<%= item.link_telecharger %>">
+                    <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+                    <%} 
+                  }) %>
+          
+                </form>
+
+
+
+                <li class="list-group-item"><h4 class="titre"> DS / EXAMIN  MULTIMIDIA  :</h4> </li>
+              
+                  <% arr.forEach(item=>{ 
+                    if(item.matiere==(" multimidia")&&(item.anner==2023)){%>
+                      <form action="<%= item.link_telecharger %>">
+                        <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+                        <%} 
+                      }) %>
+              
+                    </form>
+    
+    
+                  <li class="list-group-item"><h4 class="titre"> DS / EXAMIN  ENGLAIS  :</h4> </li>
+                  <% arr.forEach(item=>{ 
+              if(item.matiere==("englais")&&(item.anner==2023)){%>
+                <form action="<%= item.link_telecharger %>">
+                  <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+                  <%} 
+                }) %>
+        
+              </form>
+
+
+
+                    <li class="list-group-item"><h4 class="titre"> DS / EXAMIN  FRANCAIS  :</h4> </li>
+                    <% arr.forEach(item=>{ 
+              if(item.matiere==("francais")&&(item.anner==2023)){%>
+                <form action="<%= item.link_telecharger %>">
+                  <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+                  <%} 
+                }) %>
+        
+              </form>
+        
+        
+                      <li class="list-group-item"><h4 class="titre"> DS / EXAMIN   :</h4> </li>
+                     <% arr.forEach(item=>{ 
+              if(item.matiere==("")&&(item.anner==2023)){%>
+                <form action="<%= item.link_telecharger %>">
+                  <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+                  <%} 
+                }) %>
+        
+              </form>
+      
+                               </ul>
+                   </div>
+
+
+<!--finnnn  tout les dv 2023 branche lfsi   -->
+
+
+<!--tout les dv 2022 branche lfsi   -->  
+                   <div class="card" id="cadre_color" >
+      
+                    <div class="card-header" id="card-header" >
+                          <DIV class="bloc_2010" id="lfsi_2022">   <h2> LFSI 2022  :</h3> </DIV>
+                    </div>
+  
+                           <ul class="list-group list-group-flush">
+
+
+      <li class="list-group-item" name="algebre "><h4 class="titre"> DS / EXAMIN ALGEBRE :</h4> </li>
+      <% arr.forEach(item=>{ 
+        if(item.matiere==("algebre")&&(item.anner==2022)){%>
+          <form action="<%= item.link_telecharger %>">
+            <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+            <%} 
+          }) %>
+  
+        </form>
+
+
+
+     <li class="list-group-item" ><h4 class="titre"> DS / EXAMIN   ANALYSE :</h4> </li>
+      <% arr.forEach(item=>{ 
+        if(item.matiere==("analyse")&&(item.anner==2022)){%>
+          <form action="<%= item.link_telecharger %>">
+            <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+            <%} 
+          }) %>
+  
+        </form>
+
+
+        <li class="list-group-item"><h4 class="titre"> DS / EXAMIN ALGORITHME   :</h4> </li>
+        <% arr.forEach(item=>{ 
+          if(item.matiere==("algorithme")&&(item.anner==2022)){%>
+            <form action="<%= item.link_telecharger %>">
+              <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+              <%} 
+            }) %>
+    
+          </form>
+
+
+
+          <li class="list-group-item"><h4 class="titre"> DS / EXAMIN ATELIER PROGRAMATION    :</h4> </li>
+          <% arr.forEach(item=>{ 
+        if(item.matiere==("atelier programmation")&&(item.anner==2022)){%>
+          <form action="<%= item.link_telecharger %>">
+            <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+            <%} 
+          }) %>
+  
+        </form>
+            
+
+
+
+        <li class="list-group-item"><h4 class="titre"> DS / EXAMIN SYSTEME LOGIQUE  :</h4> </li>
+        <% arr.forEach(item=>{ 
+          if(item.matiere==("systeme logique")&&(item.anner==2022)){%>
+            <form action="<%= item.link_telecharger %>">
+              <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+              <%} 
+            }) %>
+    
+          </form>
+
+
+          <li class="list-group-item"><h4 class="titre"> DS / EXAMIN SYSTEME D'EXPLOITATION   :</h4> </li>
+          <% arr.forEach(item=>{ 
+            if(item.matiere==(" systeme d'exploitation")&&(item.anner==2022)){%>
+              <form action="<%= item.link_telecharger %>">
+                <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+                <%} 
+              }) %>
+      
+            </form>
+
+
+            <li class="list-group-item"><h4 class="titre"> DS / EXAMIN  MULTIMIDIA  :</h4> </li>
+          
+              <% arr.forEach(item=>{ 
+                if(item.matiere==(" multimidia")&&(item.anner==2022)){%>
+                  <form action="<%= item.link_telecharger %>">
+                    <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+                    <%} 
+                  }) %>
+          
+                </form>
+
+
+              <li class="list-group-item"><h4 class="titre"> DS / EXAMIN  ENGLAIS  :</h4> </li>
+              <% arr.forEach(item=>{ 
+          if(item.matiere==("englais")&&(item.anner==2022)){%>
+            <form action="<%= item.link_telecharger %>">
+              <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+              <%} 
+            }) %>
+    
+          </form>
+
+
+                <li class="list-group-item"><h4 class="titre"> DS / EXAMIN  FRANCAIS  :</h4> </li>
+                <% arr.forEach(item=>{ 
+          if(item.matiere==("francais")&&(item.anner==2022)){%>
+            <form action="<%= item.link_telecharger %>">
+              <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+              <%} 
+            }) %>
+    
+          </form>
+    
+    
+                  <li class="list-group-item"><h4 class="titre"> DS / EXAMIN   :</h4> </li>
+                 <% arr.forEach(item=>{ 
+          if(item.matiere==("")&&(item.anner==2022)){%>
+            <form action="<%= item.link_telecharger %>">
+              <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+              <%} 
+            }) %>
+    
+          </form>
+<!--       -->
+  
+                           </ul>
+               </div>
+
+<!-- finnnn tout les dv 2022 branche lfsi   -->              
+
+
+
+<!--tout les dv 2021 branche lfsi   -->  
+
+<div class="card" id="cadre_color" >
+      
+  <div class="card-header" id="card-header" >
+        <DIV class="bloc_2010" id="lfsi_2021">   <h2> LFSI 2021  :</h3> </DIV>
+  </div>
+
+         <ul class="list-group list-group-flush">
+
+
+<li class="list-group-item" name="algebre "><h4 class="titre"> DS / EXAMIN ALGEBRE :</h4> </li>
+<% arr.forEach(item=>{ 
+if(item.matiere==("algebre")&&(item.anner==2021)){%>
+  <form action="<%= item.link_telecharger %>">
+    <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+    <%} 
+  }) %>
+
+</form>
+
+
+
+
+<li class="list-group-item" ><h4 class="titre"> DS / EXAMIN   ANALYSE :</h4> </li>
+<% arr.forEach(item=>{ 
+if(item.matiere==("analyse")&&(item.anner==2021)){%>
+  <form action="<%= item.link_telecharger %>">
+    <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+    <%} 
+  }) %>
+
+</form>
+
+
+
+<li class="list-group-item"><h4 class="titre"> DS / EXAMIN ALGORITHME   :</h4> </li>
+<% arr.forEach(item=>{ 
+if(item.matiere==("algorithme")&&(item.anner==2021)){%>
+  <form action="<%= item.link_telecharger %>">
+    <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+    <%} 
+  }) %>
+
+</form>
+
+
+
+<li class="list-group-item"><h4 class="titre"> DS / EXAMIN ATELIER PROGRAMATION    :</h4> </li>
+<% arr.forEach(item=>{ 
+if(item.matiere==("atelier programmation")&&(item.anner==2021)){%>
+  <form action="<%= item.link_telecharger %>">
+    <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+    <%} 
+  }) %>
+
+</form>
+
+
+
+
+<li class="list-group-item"><h4 class="titre"> DS / EXAMIN SYSTEME LOGIQUE  :</h4> </li>
+<% arr.forEach(item=>{ 
+if(item.matiere==("systeme logique")&&(item.anner==2021)){%>
+  <form action="<%= item.link_telecharger %>">
+    <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+    <%} 
+  }) %>
+
+</form>
+
+
+
+<li class="list-group-item"><h4 class="titre"> DS / EXAMIN SYSTEME D'EXPLOITATION   :</h4> </li>
+<% arr.forEach(item=>{ 
+if(item.matiere==(" systeme d'exploitation")&&(item.anner==2021)){%>
+  <form action="<%= item.link_telecharger %>">
+    <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+    <%} 
+  }) %>
+
+</form>
+
+
+
+<li class="list-group-item"><h4 class="titre"> DS / EXAMIN  MULTIMIDIA  :</h4> </li>
+
+<% arr.forEach(item=>{ 
+if(item.matiere==(" multimidia")&&(item.anner==2021)){%>
+  <form action="<%= item.link_telecharger %>">
+    <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+    <%} 
+  }) %>
+
+</form>
+
+
+
+<li class="list-group-item"><h4 class="titre"> DS / EXAMIN  ENGLAIS  :</h4> </li>
+<% arr.forEach(item=>{ 
+if(item.matiere==("englais")&&(item.anner==2021)){%>
+  <form action="<%= item.link_telecharger %>">
+    <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+    <%} 
+  }) %>
+
+</form>
+
+
+
+<li class="list-group-item"><h4 class="titre"> DS / EXAMIN  FRANCAIS  :</h4> </li>
+<% arr.forEach(item=>{ 
+if(item.matiere==("francais")&&(item.anner==2021)){%>
+  <form action="<%= item.link_telecharger %>">
+    <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+    <%} 
+  }) %>
+
+</form>
+
+<li class="list-group-item"><h4 class="titre"> DS / EXAMIN   :</h4> </li>
+<% arr.forEach(item=>{ 
+if(item.matiere==("")&&(item.anner==2021)){%>
+  <form action="<%= item.link_telecharger %>">
+    <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+    <%} 
+  }) %>
+
+</form>
+
+
+         </ul>
+</div>
+
+<!-- finnnn tout les dv 2021 branche lfsi   -->              
+
+
+
+
+
+
+<!--tout les dv 2020 branche lfsi   -->  
+<div class="card" id="cadre_color" >
+      
+  <div class="card-header" id="card-header" >
+        <DIV class="bloc_2010" id="lfsi_2020">   <h2> LFSI 2020  :</h3> </DIV>
+  </div>
+
+         <ul class="list-group list-group-flush">
+
+
+<li class="list-group-item" name="algebre "><h4 class="titre"> DS / EXAMIN ALGEBRE :</h4> </li>
+<% arr.forEach(item=>{ 
+if(item.matiere==("algebre")&&(item.anner==2020)){%>
+  <form action="<%= item.link_telecharger %>">
+    <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+    <%} 
+  }) %>
+
+</form>
+
+
+
+
+<li class="list-group-item" ><h4 class="titre"> DS / EXAMIN   ANALYSE :</h4> </li>
+<% arr.forEach(item=>{ 
+if(item.matiere==("analyse")&&(item.anner==2020)){%>
+  <form action="<%= item.link_telecharger %>">
+    <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+    <%} 
+  }) %>
+
+</form>
+
+
+
+<li class="list-group-item"><h4 class="titre"> DS / EXAMIN ALGORITHME   :</h4> </li>
+<% arr.forEach(item=>{ 
+if(item.matiere==("algorithme")&&(item.anner==2020)){%>
+  <form action="<%= item.link_telecharger %>">
+    <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+    <%} 
+  }) %>
+
+</form>
+
+
+<li class="list-group-item"><h4 class="titre"> DS / EXAMIN ATELIER PROGRAMATION    :</h4> </li>
+<% arr.forEach(item=>{ 
+if(item.matiere==("atelier programmation")&&(item.anner==2020)){%>
+  <form action="<%= item.link_telecharger %>">
+    <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+    <%} 
+  }) %>
+
+</form>
+
+
+
+
+<li class="list-group-item"><h4 class="titre"> DS / EXAMIN SYSTEME :</h4> </li>
+<% arr.forEach(item=>{ 
+
+if(item.matiere==("systeme logique")&&(item.anner==2020)){%>
+  <form action="<%= item.link_telecharger %>">
+    <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+    <%} 
+  }) %>
+
+</form>
+
+
+<li class="list-group-item"><h4 class="titre"> DS / EXAMIN SYSTEME D'EXPLOITATION   :</h4> </li>
+<% arr.forEach(item=>{ 
+if(item.matiere==(" systeme d'exploitation")&&(item.anner==2020)){%>
+  <form action="<%= item.link_telecharger %>">
+    <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+    <%} 
+  }) %>
+
+</form>
+
+
+
+<li class="list-group-item"><h4 class="titre"> DS / EXAMIN  MULTIMIDIA  :</h4> </li>
+
+<% arr.forEach(item=>{ 
+if(item.matiere==(" multimidia")&&(item.anner==2020)){%>
+  <form action="<%= item.link_telecharger %>">
+    <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+    <%} 
+  }) %>
+
+</form>
+
+
+<li class="list-group-item"><h4 class="titre"> DS / EXAMIN  ENGLAIS  :</h4> </li>
+<% arr.forEach(item=>{ 
+if(item.matiere==("englais")&&(item.anner==2020)){%>
+  <form action="<%= item.link_telecharger %>">
+    <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+    <%} 
+  }) %>
+
+</form>
+
+
+
+<li class="list-group-item"><h4 class="titre"> DS / EXAMIN  FRANCAIS  :</h4> </li>
+<% arr.forEach(item=>{ 
+if(item.matiere==("francais")&&(item.anner==2020)){%>
+  <form action="<%= item.link_telecharger %>">
+    <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+    <%} 
+  }) %>
+
+</form>
+
+
+<li class="list-group-item"><h4 class="titre"> DS / EXAMIN   :</h4> </li>
+<% arr.forEach(item=>{ 
+if(item.matiere==("")&&(item.anner==2020)){%>
+  <form action="<%= item.link_telecharger %>">
+    <li class="list-group-item"  ><button type="submit"   class="btn btn-primary" class="btn"><img class="telecharger" src="images\telecharger.png" ></button><img class="pdf" src="images\pdf.jpg"><p class="nom_dv"> <%=item.ds_examin %> <%= item.matiere %> <%= item.semester %> </p></li>
+    <%} 
+  }) %>
+
+</form>
+<!--       -->
+
+         </ul>
+</div>
+
+
+<!-- finnnn tout les dv 2020 branche lfsi   -->              
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+    
+
+
+<div>
+  <a href="#" class="to-top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+</div>
+
+  </body>
+</html>

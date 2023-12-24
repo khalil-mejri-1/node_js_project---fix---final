@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+<link rel="stylesheet" href="css/style_ajout_dv.css">
+
+<script src="js/js_button_ajout_dv.js"></script>
+<script src="js/verif_ajout_dv.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page ajoute</title>
+   
+</head>
+<body class="body">
+    <form action="/" method="post">
+<h1  style="text-align: center; font: 5em sans-serif; color: #E0E0E0;">Ajout dv :  </h1>
+
+<h1 style="color: red;"></h1>
+
+
+  <!--button 1  -->
+  <div class="cont_select_center">
+  
+    <!-- Custom select structure -->
+    <div id="condition">
+    <div class="select_mate" data-mate-select="active">
+      <select name="branche"  onclick="return false;" id="branche"  onchange=""  >
+        <option value="0" >Branche </option>
+        <option value="sc info">sc info</option>
+  
+      </select>
+      <p class="selecionado_opcion" onclick="open_select(this)"></p><span onclick="open_select(this)" class="icon_select_mate"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
+          <path d="M0-.75h24v24H0z" fill="none" />
+        </svg></span>
+      <div class="cont_list_select_mate">
+        <ul class="cont_select_int"> </ul>
+      </div>
+    </div>
+    <!-- Custom select structure -->
+  
+  </div> <!-- End div center   -->
+  
+  </div>
+<!-- fin button 1  -->
+
+  
+  <!--button 2  -->
+  <div id="condition">
+  <div class="cont_select_center_2">
+  
+    <!-- Custom select structure -->
+    <div class="select_mate" data-mate-select="active">
+      <select name="semester"  onclick="return false;" id="semester" onchange=" ">
+        <option value="0">  Semester </option>
+        <option value="semester 1"> semester 1</option>
+        <option value="semester 2"> semester 2</option>
+        
+      </select>
+      <p class="selecionado_opcion" onclick="open_select(this)"></p><span onclick="open_select(this)" class="icon_select_mate"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
+          <path d="M0-.75h24v24H0z" fill="none" />
+        </svg></span>
+      <div class="cont_list_select_mate">
+        <ul class="cont_select_int"> </ul>
+      </div>
+    </div>
+    <!-- Custom select structure -->
+  
+  </div> <!-- End div center   -->
+  </div>
+<!-- fin button 2  -->
+
+  
+  <!--button 3  -->
+  <div id="condition">
+  <div class="cont_select_center_3">
+  
+    <!-- Custom select structure -->
+    <div class="select_mate" data-mate-select="active">
+      <select name="matiere" onclick="return false;" id="matiere" onchange=" ">
+        <option value="0">  Matiere </option>
+        <option value="algebre" > algebre </option>
+        <option value="analyse"> analyse</option>
+        <option value="algorithme"> algorithme</option>
+        <option value="atelier programmation"> atelier programmation</option>
+        <option value="systeme logique">  systeme logique </option>
+        <option value=" systeme d'exploitation"> systeme d'exploitation </option>
+        <option value=" multimidia"> multimidia</option>
+        <option value="englais"> englais</option>
+        <option value="francais"> francais</option>
+        <option value="python"> python</option>
+        <option value="rasou"> rasou</option>
+        
+  
+      </select>
+      <p class="selecionado_opcion" onclick="open_select(this)"></p><span onclick="open_select(this)" class="icon_select_mate"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
+          <path d="M0-.75h24v24H0z" fill="none" />
+        </svg></span>
+      <div class="cont_list_select_mate">
+        <ul class="cont_select_int"> </ul>
+      </div>
+    </div>
+    <!-- Custom select structure -->
+  
+  </div> <!-- End div center   -->
+
+  </div>
+  <!-- fin button 3  -->
+
+
+
+ <!--  button 4  -->
+  <div id="condition">
+    <div class="cont_select_center_4">
+    
+      <!-- Custom select structure -->
+      <div class="select_mate" data-mate-select="active">
+        <select name="ds_examin"  onclick="return false;" id="ds_examin" onchange=" ">
+          <option value="0">  Ds or Examin </option>
+          <option value="ds"> DS</option>
+          <option value="examin"> EXAMIN</option>
+          
+        </select>
+        <p class="selecionado_opcion" onclick="open_select(this)"></p><span onclick="open_select(this)" class="icon_select_mate"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
+            <path d="M0-.75h24v24H0z" fill="none" />
+          </svg></span>
+        <div class="cont_list_select_mate">
+          <ul class="cont_select_int"> </ul>
+        </div>
+      </div>
+      <!-- Custom select structure -->
+    
+    </div> <!-- End div center   -->
+
+    </div>
+ <!-- fin button 4  --> 
+
+
+     
+  <!--button 5  -->
+  <div id="condition">
+    <div class="cont_select_center_5">
+    
+      <!-- Custom select structure -->
+      <div class="select_mate" data-mate-select="active">
+        <select name="anner"  onclick="return false;" id="anner" onchange="">
+          <option value="0">  anner </option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+          <option value="2020">2020</option>
+          <option value="2019">2019</option>
+          <option value="2018">2018</option>
+          <option value="2017">2017</option>
+          <option value="2016">2016</option>
+          <option value="2015">2015</option>
+          <option value="2014">2014</option>
+          <option value="2013">2013</option>
+          
+    
+        </select>
+        <p class="selecionado_opcion" onclick="open_select(this)"></p><span onclick="open_select(this)" class="icon_select_mate"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
+            <path d="M0-.75h24v24H0z" fill="none" />
+          </svg></span>
+        <div class="cont_list_select_mate">
+          <ul class="cont_select_int"> </ul>
+        </div>
+      </div>
+      <!-- Custom select structure -->
+    
+    </div> <!-- End div center   -->
+    </div>
+
+  <!--finnnn button 5  -->
+
+  <!--button 6  -->
+
+  <div class="input-group mb-3">
+ 
+    <input type="text" class="form-control" placeholder="Link telecharger"  name="link_telecharger" id="link_telecharger"   oninput="">
+  </div>
+
+
+<!-- finnnn button 6  -->
+
+
+
+
+  <input class="button" type="submit" value="button" onclick="return validateSelection()" >
+  <div class="error" id="error"></div>
+ 
+</form>
+
+</body>
+</html>
